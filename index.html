@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changara Muslim Youth | Faith, Brotherhood & Community Development</title>
+<meta name="description" content="Changara Muslim Youth is a youth-led group in Teso North, Busia County, building faith, brotherhood, skills and community welfare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#08302a;
+  --emerald:#0f5132;
+  --mint:#e6f0eb;
+  --paper:#f7faf8;
+  --gold:#c9a24a;
+  --ink:#10211c;
+  --muted:#51645d;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.0625rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.12;font-weight:600}
+h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:1rem;color:var(--night)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(8,48,42,.96);backdrop-filter:blur(8px);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:4.25rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:1.15rem;letter-spacing:.01em}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:2rem;list-style:none;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.9}
+nav a:hover{color:var(--gold);opacity:1}
+.btn{display:inline-block;background:var(--gold);color:var(--night);padding:.85rem 1.7rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;transition:background .2s}
+.btn:hover{background:#dab95f}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent}
+nav .btn{padding:.5rem 1.2rem;color:var(--night)}
+nav .btn:hover{color:var(--night)}
+
+/* Hero */
+.hero{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a24a' stroke-width='1.2'%3E%3Cpath d='M40 4l10 22 22-10-10 22 22 10-22 10 10 22-22-10-10 22-10-22-22 10 10-22L4 40l22-10-10-22 22 10z'/%3E%3C/g%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;padding-top:5rem;padding-bottom:5rem}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;margin-bottom:1.25rem}
+.hero p{font-size:1.2rem;color:#cfe0d9;max-width:50ch;margin-bottom:2rem}
+.hero .actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.arch{border-radius:999px 999px 14px 14px;overflow:hidden;border:2px solid var(--gold);padding:10px;max-width:420px;margin-left:auto}
+.arch img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 6px 6px}
+
+/* Sections */
+section{padding:5.5rem 0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about p+p{margin-top:1rem}
+.values{display:grid;gap:0}
+.values div{padding:1.4rem 0;border-top:1px solid #c9d8d0}
+.values div:last-child{border-bottom:1px solid #c9d8d0}
+.values h3{font-size:1.35rem;color:var(--emerald);margin-bottom:.3rem}
+.values p{color:var(--muted)}
+
+.focus{background:var(--mint)}
+.focus .head{max-width:640px;margin-bottom:3rem}
+.rows{border-top:2px solid var(--night)}
+.row{display:grid;grid-template-columns:.9fr 1.4fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid #b9cdc3}
+.row h3{font-size:1.6rem;color:var(--night)}
+.row ul{list-style:none;color:var(--muted)}
+.row li{padding-left:1.4rem;position:relative;margin-bottom:.4rem}
+.row li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.row p{margin-bottom:.8rem;color:var(--ink)}
+
+.quote{background:var(--emerald);color:#fff;text-align:left}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.25;max-width:24em;font-weight:400}
+.quote cite{display:block;margin-top:1.5rem;font-style:normal;color:var(--gold);font-weight:600}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem;counter-reset:s}
+.steps div{counter-increment:s;border-left:3px solid var(--gold);padding-left:1.25rem}
+.steps div::before{content:counter(s);font-family:var(--serif);font-size:2.2rem;color:var(--emerald);display:block;line-height:1}
+.steps h3{font-size:1.3rem;margin:.4rem 0}
+.steps p{color:var(--muted)}
+
+.join{background:#fff}
+.join .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem}
+.facts{margin-top:2rem;list-style:none;color:var(--muted)}
+.facts li{margin-bottom:.6rem}
+.facts strong{color:var(--night)}
+form{background:var(--paper);border:1px solid #c9d8d0;border-radius:18px;padding:2rem;display:grid;gap:1.1rem}
+label{font-weight:600;font-size:.95rem;display:block;margin-bottom:.35rem}
+input,select,textarea{width:100%;padding:.8rem .9rem;border:1px solid #aebfb6;border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+textarea{resize:vertical}
+.msg{display:none;padding:1rem;border-radius:10px;background:var(--mint);border-left:4px solid var(--emerald);font-weight:500}
+.msg.show{display:block}
+
+footer{background:var(--night);color:#cfe0d9;padding:3.5rem 0 2rem}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+footer h4{color:#fff;font-family:var(--serif);font-size:1.1rem;margin-bottom:.8rem}
+footer ul{list-style:none}
+footer li{margin-bottom:.4rem}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold)}
+.legal{border-top:1px solid rgba(255,255,255,.15);padding-top:1.5rem;font-size:.9rem}
+
+@media(max-width:860px){
+  .hero .wrap,.about,.join .wrap,.row,.steps,footer .cols{grid-template-columns:1fr}
+  .hero .wrap{gap:3rem;padding-top:3.5rem;padding-bottom:3.5rem}
+  .arch{margin:0;max-width:320px}
+  section{padding:4rem 0}
+  nav li:not(:last-child){display:none}
+  .row{gap:1rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Changara Muslim Youth home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l5 11 11-5-5 11 11 5-11 5 5 11-11-5-5 11-5-11-11 5 5-11L2 20l11-5-5-11 11 5z" fill="none" stroke="#c9a24a" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="#c9a24a"/></svg>
+      Changara <span>Muslim Youth</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">What we do</a></li>
+        <li><a href="#reminder">Reminder</a></li>
+        <li><a href="#join" class="btn">Join us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <h1>Faith in action. Youth who lead.</h1>
+      <p>Changara Muslim Youth brings young people together in Teso North, Busia County, to grow in faith, support one another and build a stronger community.</p>
+      <div class="actions">
+        <a href="#join" class="btn">Become a member</a>
+        <a href="https://www.facebook.com/changara.muslimsyouths.5/" target="_blank" rel="noopener" class="btn ghost">Follow us on Facebook</a>
+      </div>
+    </div>
+    <div class="arch">
+      <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=900&q=80" alt="Mosque architecture with a calm, sunlit courtyard">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>A group built on brotherhood and purpose</h2>
+      <p class="lead">We are a youth-led Muslim group in Changara. We believe a young person who is grounded in faith, skilled in a trade and active in the community can change a whole neighbourhood.</p>
+      <p>Our members come together to learn, to save, to serve and to encourage each other. We work alongside families, elders and neighbours across Changara and Busia County, because lasting change is built together.</p>
+    </div>
+    <div class="values">
+      <div><h3>Faith and guidance</h3><p>We share Islamic knowledge, good character and the habit of doing right in everyday life.</p></div>
+      <div><h3>Youth empowerment</h3><p>We open doors to skills, enterprise and peer support so members can stand on their own feet.</p></div>
+      <div><h3>Community service</h3><p>We take part in welfare, charity and local programmes that help our neighbours.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="focus" class="focus">
+  <div class="wrap">
+    <div class="head">
+      <h2>What we do</h2>
+      <p class="lead">Three areas of work guide our programmes through the year.</p>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <h3>Islamic education and reminders</h3>
+        <div>
+          <p>Learning that shapes character, delivered in a friendly circle where every member can ask questions.</p>
+          <ul><li>Halaqas and study circles</li><li>Weekly Jummah reminders</li><li>Guidance on Islamic ethics and daily conduct</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <h3>Skills and economic growth</h3>
+        <div>
+          <p>Practical support to help young people earn, save and start small ventures.</p>
+          <ul><li>Group savings and shared investment</li><li>Entrepreneurship awareness sessions</li><li>Vocational skills and mentorship</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <h3>Welfare and outreach</h3>
+        <div>
+          <p>Caring for people around us and building peaceful relations across Changara.</p>
+          <ul><li>Visiting and supporting the sick</li><li>Charity and community programmes</li><li>Peaceful coexistence and dialogue with neighbours</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reminder" class="quote">
+  <div class="wrap">
+    <blockquote>Spread goodness, strengthen brotherhood, and be a positive force in your community.</blockquote>
+    <cite>Jummah Mubarak. Every act of kindness is charity.</cite>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How to join</h2>
+    <p class="lead">Membership is open to youth in Changara and the surrounding area. Getting started takes three steps.</p>
+    <div class="steps">
+      <div><h3>Send your details</h3><p>Fill in the form below with your name and phone or WhatsApp number.</p></div>
+      <div><h3>Meet the team</h3><p>A group leader will contact you and invite you to the next gathering.</p></div>
+      <div><h3>Take part</h3><p>Join a halaqa, a savings circle or a community project that suits you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <div class="wrap">
+    <div>
+      <h2>Get involved</h2>
+      <p class="lead">Whether you want to join, volunteer or partner with us, we would like to hear from you.</p>
+      <ul class="facts">
+        <li><strong>Location:</strong> Changara, Teso North Sub-County, Busia County, Kenya</li>
+        <li><strong>Facebook:</strong> <a href="https://www.facebook.com/changara.muslimsyouths.5/" target="_blank" rel="noopener">Changara Muslim Youths</a></li>
+        <li><strong>Who can join:</strong> Young people, supporters and partners</li>
+      </ul>
+    </div>
+    <form id="f" novalidate>
+      <div><label for="n">Full name</label><input id="n" type="text" placeholder="Your full name" required></div>
+      <div><label for="p">Phone or WhatsApp number</label><input id="p" type="tel" placeholder="+254 7XX XXX XXX" required></div>
+      <div><label for="t">How would you like to take part?</label>
+        <select id="t"><option>Become a youth member</option><option>Volunteer</option><option>Partner or sponsor</option><option>General enquiry</option></select></div>
+      <div><label for="m">Message (optional)</label><textarea id="m" rows="4" placeholder="Tell us about yourself or how you would like to help"></textarea></div>
+      <button class="btn" type="submit">Send my details</button>
+      <p class="msg" id="ok" role="status">Thank you. We have received your details and a group leader will contact you soon.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Changara Muslim Youth</h4>
+        <p>A youth-led group serving Changara and Busia County through faith, education, enterprise and welfare.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#about">About us</a></li><li><a href="#focus">What we do</a></li><li><a href="#join">Get involved</a></li></ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul><li><a href="https://www.facebook.com/changara.muslimsyouths.5/" target="_blank" rel="noopener">Facebook</a></li><li>Teso North, Busia County</li></ul>
+      </div>
+    </div>
+    <div class="legal">&copy; 2026 Changara Muslim Youth Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('n'),p=document.getElementById('p');
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return;}
+  document.getElementById('ok').classList.add('show');
+  this.reset();
+});
+</script>
+</body>
+</html>
